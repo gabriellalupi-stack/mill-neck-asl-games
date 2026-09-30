@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mill Neck Apple Fest ASL Games</title>
+<style>
+:root{--cream:#fff9ea;--paper:#fffdf6;--green:#173f2b;--red:#b92f24;--gold:#d99a1e;--orange:#d96b22;--ink:#203027}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:radial-gradient(circle at 12% 8%,#f7c36a 0 2px,transparent 3px),radial-gradient(circle at 88% 18%,#ef9d53 0 2px,transparent 3px),linear-gradient(180deg,#fff9ea,#fffdf7 45%,#f8edd2)}
+.wrap{max-width:900px;margin:auto;padding:18px 16px 52px}
+.hero{text-align:center;background:var(--paper);border:3px solid var(--gold);border-radius:26px;padding:24px 18px;box-shadow:0 10px 30px rgba(69,44,15,.12)}
+.eyebrow{font-weight:700;color:var(--green);letter-spacing:.05em;text-transform:uppercase}
+h1{margin:.25rem 0 .4rem;font-size:clamp(2.2rem,8vw,4.6rem);line-height:.95;color:var(--red)}
+.hero p{font-size:1.15rem;max-width:690px;margin:.7rem auto}
+.pill{display:inline-block;background:var(--green);color:#fff;padding:10px 16px;border-radius:999px;font-weight:700;margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.card{background:rgba(255,253,246,.97);border:2px solid #ead39c;border-radius:22px;padding:20px;box-shadow:0 8px 20px rgba(69,44,15,.08)}
+.card.full{grid-column:1/-1}
+h2{margin:0 0 8px;color:var(--green);font-size:1.55rem} h3{color:var(--red);margin:14px 0 6px}
+button,.btn{appearance:none;border:0;border-radius:12px;padding:11px 14px;font-weight:700;font-size:1rem;cursor:pointer;text-decoration:none;background:var(--red);color:#fff;display:inline-block;margin:5px 4px 5px 0}
+button.secondary,.btn.secondary{background:var(--green)} button.gold,.btn.gold{background:var(--gold);color:#241b0c}
+.challenge{border:2px dashed var(--gold);border-radius:16px;padding:14px;margin:12px 0;background:#fffaf0}
+.word{font-size:2rem;color:var(--red);font-weight:800;letter-spacing:.08em;margin:.4rem 0}
+.small{font-size:.92rem;color:#5f6a62}
+.checklist{display:grid;gap:9px;margin:10px 0}
+.check{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #eadfca;border-radius:12px;padding:10px}
+.check input{width:22px;height:22px;accent-color:var(--green)}
+.quiz-option{display:block;width:100%;text-align:left;margin:7px 0;background:#f4ead2;color:#253128;border:1px solid #dbc28a}
+.quiz-option.correct{background:#dff0df;border-color:#7ea97e}.quiz-option.wrong{background:#f7d7d2;border-color:#ce8278}
+.result{font-weight:700;margin-top:8px;min-height:24px}
+.bingo{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.bingo div{min-height:92px;background:#fff;border:2px solid #e4c56f;border-radius:12px;padding:9px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700}
+.bingo .free{background:#f4d78e;color:#56380a}
+.footer{text-align:center;margin-top:22px;font-size:.95rem}.footer a{color:var(--green)}
+.notice{background:#fff3cc;border-left:5px solid var(--gold);padding:12px 14px;border-radius:10px;margin-top:16px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.card.full{grid-column:auto}.bingo div{min-height:78px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero"><div class="eyebrow">Mill Neck Apple Festival</div><h1>ASL Game Hub 🤟🍎</h1><p>Learn a few signs, test your fingerspelling, complete an Apple Fest scavenger hunt, and try a beginner ASL challenge.</p><span class="pill">No experience needed • Kids & adults welcome</span></section>
+<div class="grid">
+<section class="card"><h2>🍎 Game 1: Learn 5 Signs</h2><p>Learn these five festival-friendly signs, then come back to the ASL table and show us any three.</p><div class="challenge">
+<h3>HELLO</h3><a class="btn secondary" href="https://www.lifeprint.com/asl101/pages-signs/h/hello.htm" target="_blank" rel="noopener">Watch / Learn</a>
+<h3>THANK YOU</h3><a class="btn secondary" href="https://www.lifeprint.com/asl101/pages-signs/t/thank-you.htm" target="_blank" rel="noopener">Watch / Learn</a>
+<h3>APPLE</h3><a class="btn secondary" href="https://www.lifeprint.com/asl101/pages-signs/a/apple.htm" target="_blank" rel="noopener">Watch / Learn</a>
+<h3>PIE</h3><a class="btn secondary" href="https://www.lifeprint.com/asl101/pages-signs/p/pie.htm" target="_blank" rel="noopener">Watch / Learn</a>
+<h3>FRIEND</h3><a class="btn secondary" href="https://www.lifeprint.com/asl101/pages-signs/f/friend.htm" target="_blank" rel="noopener">Watch / Learn</a>
+</div></section>
+<section class="card"><h2>🔤 Game 2: Fingerspelling Challenge</h2><p>Tap the button, fingerspell the word before revealing it, then try another.</p><div class="challenge"><div class="small">Your word:</div><div class="word" id="fsWord">APPLE</div><button onclick="newWord()">Give Me a Word</button><button class="gold" onclick="toggleSpelling()">Show / Hide Letters</button><div class="result" id="spelling"></div></div><p class="small">Challenge words include MILL NECK, APPLE FEST, MANOR, AUTUMN, PIE, FAMILY, FRIEND and more.</p></section>
+<section class="card full"><h2>🕵️ Game 3: Apple Fest ASL Scavenger Hunt</h2><p>Learn or use each sign while exploring the festival. Your progress stays checked on this device.</p><div class="checklist" id="hunt">
+<label class="check"><input type="checkbox" data-key="help"> Learn <strong>HELP</strong> <a href="https://www.lifeprint.com/asl101/pages-signs/h/help.htm" target="_blank">learn</a></label>
+<label class="check"><input type="checkbox" data-key="eat"> Learn <strong>EAT</strong> <a href="https://www.lifeprint.com/asl101/pages-signs/e/eat.htm" target="_blank">learn</a></label>
+<label class="check"><input type="checkbox" data-key="drink"> Learn <strong>DRINK</strong> <a href="https://www.lifeprint.com/asl101/pages-signs/d/drink.htm" target="_blank">learn</a></label>
+<label class="check"><input type="checkbox" data-key="family"> Learn <strong>FAMILY</strong> <a href="https://www.lifeprint.com/asl101/index/f.htm" target="_blank">find sign</a></label>
+<label class="check"><input type="checkbox" data-key="autumn"> Learn <strong>AUTUMN / FALL</strong> <a href="https://www.lifeprint.com/asl101/pages-signs/f/fall.htm" target="_blank">learn</a></label>
+<label class="check"><input type="checkbox" data-key="thanks"> Sign <strong>THANK YOU</strong> to someone today</label>
+<label class="check"><input type="checkbox" data-key="name"> Fingerspell <strong>YOUR NAME</strong> for someone</label>
+<label class="check"><input type="checkbox" data-key="table"> Visit the <strong>ASL TABLE</strong> and show us 3 signs</label>
+</div><button class="secondary" onclick="resetHunt()">Reset My Hunt</button></section>
+<section class="card"><h2>🧠 Game 4: Quick ASL Quiz</h2><p>Three easy questions.</p><div id="quizBox"></div><button onclick="startQuiz()">Start / Restart Quiz</button></section>
+<section class="card"><h2>💬 Game 5: Sign-It Challenge</h2><p>Pick one. Learn the signs you need, then try signing the whole idea.</p><div class="challenge"><strong>Level 1:</strong> HELLO!<br><br><strong>Level 2:</strong> THANK YOU.<br><br><strong>Level 3:</strong> I LIKE APPLE PIE.<br><br><strong>Level 4:</strong> MY NAME IS ______.<br><br><strong>Bonus:</strong> I AM LEARNING ASL.</div><a class="btn secondary" href="https://www.lifeprint.com/asl101/index/dictionary_main.htm" target="_blank" rel="noopener">Open ASL Dictionary</a></section>
+<section class="card full"><h2>🏆 Bonus: Mill Neck ASL Bingo</h2><p>Complete a row, column, or diagonal.</p><div class="bingo"><div>Fingerspell APPLE</div><div>Learn THANK YOU</div><div>Sign HELLO to someone</div><div>Learn PIE</div><div class="free">FREE<br>🤟</div><div>Fingerspell your name</div><div>Learn FRIEND</div><div>Learn HELP</div><div>Show 3 signs at the ASL table</div></div></section>
+</div>
+<div class="notice"><strong>Want to keep learning?</strong> Explore the free ASL University / Lifeprint lessons after Apple Fest. <a href="https://www.lifeprint.com/asl101/lessons/lessons.htm" target="_blank" rel="noopener">Open the lesson list.</a></div>
+<div class="footer">Created for the Mill Neck Apple Festival ASL table • Learning links open Lifeprint / ASL University resources.</div>
+</div>
+<script>
+const fsWords=["APPLE","APPLE FEST","MILL NECK","MANOR","PIE","AUTUMN","FAMILY","FRIEND","SCHOOL","THANK YOU","DEAF","ASL"];
+let currentWord="APPLE";
+function newWord(){let w=currentWord;while(w===currentWord&&fsWords.length>1){w=fsWords[Math.floor(Math.random()*fsWords.length)]}currentWord=w;document.getElementById("fsWord").textContent=w;document.getElementById("spelling").textContent=""}
+function toggleSpelling(){const el=document.getElementById("spelling");el.textContent=el.textContent?"":currentWord.split("").map(c=>c===" "?"   ":" "+c+" ").join("")}
+const boxes=[...document.querySelectorAll('#hunt input[type=checkbox]')];
+boxes.forEach(b=>{const key="mn_asl_"+b.dataset.key;b.checked=localStorage.getItem(key)==="1";b.addEventListener("change",()=>localStorage.setItem(key,b.checked?"1":"0"))});
+function resetHunt(){boxes.forEach(b=>{b.checked=false;localStorage.removeItem("mn_asl_"+b.dataset.key)})}
+const quiz=[{q:"Which activity practices spelling words by hand?",a:["Fingerspelling","Lip reading","Mime"],c:0},{q:"Which sign would be especially useful after someone helps you at Apple Fest?",a:["THANK YOU","PIE","AUTUMN"],c:0},{q:"What should you do after learning three signs?",a:["Hide forever","Come back to the ASL table and show us","Only whisper them"],c:1}];
+let qi=0,score=0;
+function startQuiz(){qi=0;score=0;renderQ()}
+function renderQ(){const box=document.getElementById("quizBox");if(qi>=quiz.length){box.innerHTML=`<div class="challenge"><strong>You got ${score} of ${quiz.length}!</strong><br>${score===3?"ASL table bragging rights unlocked. 🍎🤟":"Try again and see if you can get all three."}</div>`;return}const item=quiz[qi];box.innerHTML=`<div class="challenge"><strong>${qi+1}. ${item.q}</strong><div id="opts"></div><div class="result" id="qres"></div></div>`;const opts=document.getElementById("opts");item.a.forEach((x,i)=>{const b=document.createElement("button");b.className="quiz-option";b.textContent=x;b.onclick=()=>answer(i,b,item.c);opts.appendChild(b)})}
+function answer(i,btn,c){document.querySelectorAll(".quiz-option").forEach(b=>b.disabled=true);if(i===c){score++;btn.classList.add("correct");document.getElementById("qres").textContent="Correct! 🍎"}else{btn.classList.add("wrong");document.querySelectorAll(".quiz-option")[c].classList.add("correct");document.getElementById("qres").textContent="Not quite. The correct answer is highlighted."}setTimeout(()=>{qi++;renderQ()},900)}
+</script>
+</body>
+</html>
